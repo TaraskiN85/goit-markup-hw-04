@@ -28,6 +28,7 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style-type: none;
 }
 
 img {
@@ -197,6 +198,11 @@ img {
 .hero {
   background: var(--navyblue);
   padding: 188px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
+  url(../images/hero/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
 }
 
 .hero-container {
@@ -204,6 +210,7 @@ img {
   flex-direction: column;
   gap: 48px;
   align-items: center;
+  height: 100%;
 }
 
 .hero-title {
@@ -244,11 +251,22 @@ img {
 }
 
 .principles-subtitle {
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 
 .principles-list-item {
   width: calc((100% - 72px) / 4);
+}
+
+.principles-list-item .image-container {
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--cloud);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* services section */
@@ -276,10 +294,13 @@ img {
 .team-list-item {
   background: var(--white);
   width: calc((100% - 72px) / 4);
-  padding-bottom: 32px;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-list-item:hover .socials-link-item {
+  background-color: var(--ocean);
 }
 
 .team-item-content {
@@ -293,6 +314,33 @@ img {
 
 .team-list-text {
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.socials-link-item {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link-item {
+  line-height: 0;
+}
+
+.socials-icon {
+  fill: var(--white);
 }
 
 /* footer */
